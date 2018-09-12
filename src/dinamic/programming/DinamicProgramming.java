@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package dinamic.programming;
+import java.math.BigInteger;
 import java.util.Scanner;
 
 /**
@@ -21,7 +22,7 @@ public class DinamicProgramming {
         String identitas = "Nurafiif Almas Azhari / X RPL 5 / 33";
         judul(identitas);
         int n = input();
-       
+       BigInteger hasil = fibo(n);
     }
      private static int input() {
         Scanner input = new Scanner(System.in);
@@ -29,5 +30,15 @@ public class DinamicProgramming {
        int n = input.nextInt();
        return n;
     }
-    
+     private static BigInteger fibo(int n){
+         BigInteger[] hasil = new BigInteger[n];
+         
+         hasil [0] = BigInteger.ONE;
+         hasil [1] = BigInteger.ONE;
+         
+         for (int i =2; i < n;n++){
+             hasil[i] = hasil [i - 1].add(hasil[i-2]);
+         }
+             return hasil[n-1];
     }
+}
