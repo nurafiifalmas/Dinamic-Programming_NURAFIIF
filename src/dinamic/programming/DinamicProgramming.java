@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package dinamic.programming;
+import java.util.Scanner;
 
 /**
  *
@@ -19,8 +20,14 @@ public class DinamicProgramming {
     public static void main(String[] args) {
         String identitas = "Nurafiif Almas Azhari / X RPL 5 / 33";
         judul(identitas);
-    
-     
+        int n = input();
+       
+    }
+     private static int input() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Bilangan ke- :");
+       int n = input.nextInt();
+       return n;
     }
     
-}
+    }
